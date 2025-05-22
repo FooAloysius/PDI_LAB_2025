@@ -1,25 +1,25 @@
 // Foo and Jun Xiang
-public class Student2{
+public class Student{
     private String name;
     private int studentID;
     private double mark;
 
 // Default constructor
-    public Student2() {
+    public Student() {
         this.name = "Unknown";
         this.studentID = 10000000;
         this.mark = 0.0;
     }
 
 // Parameter constructor
-public Student2(String name, int studentID, double mark) {
+public Student(String name, int studentID, double mark) {
         setName(name);
         setStudentID(studentID);
         setMark(mark);
     }
 
 // Copy constructor
-    public Student2(Student2 other) {
+    public Student(Student other) {
         this.name = other.getName();
         this.studentID = other.getStudentID();
         this.mark = other.getMark();
