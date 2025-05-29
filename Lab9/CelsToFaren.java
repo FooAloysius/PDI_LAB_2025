@@ -13,7 +13,7 @@ public class CelsToFaren {
         int con_type, data_type;
         do { 
             System.out.println("What conversion do you want to perform? ");
-            System.out.println("\t(1) celcius to farenheit\n\t(2) farenheit to celcius");
+            System.out.println("\t(1) celsius to farenheit\n\t(2) farenheit to celsius");
             con_type = scanner.nextInt();
 
             System.out.println("What is your data type for the value you want to convert from, \n\t(1) int \n\t(2) double");
@@ -21,17 +21,17 @@ public class CelsToFaren {
             switch (con_type) {
                 case 1:
                     if (data_type == 1) {
-                        int celcius, fahrenheit;
-                        System.out.println("Please enter Celcius (int): ");
-                        celcius = scanner.nextInt();
-                        fahrenheit = CelsToFaren();
-                        System.out.println(celcius + "C = " + fahrenheit + "F");
+                        int celsius, fahrenheit;
+                        System.out.println("Please enter celsius (int): ");
+                        celsius = scanner.nextInt();
+                        fahrenheit = CelsToFaren(celsius);
+                        System.out.println(celsius + "C = " + fahrenheit + "F");
                     } else if (data_type == 2) {
-                        double celcius, fahrenheit;
-                        System.out.println("Please enter Celcius (double): ");
-                        celcius = scanner.nextDouble();
-                        fahrenheit = (9.0 / 5.0) * celcius + 32;
-                        System.out.println(celcius + "C = " + fahrenheit + "F");
+                        double celsius, fahrenheit;
+                        System.out.println("Please enter celsius (double): ");
+                        celsius = scanner.nextDouble();
+                        fahrenheit = CelsToFaren(celsius);
+                        System.out.println(celsius + "C = " + fahrenheit + "F");
                     } else {
                         System.out.println("Error, invalid data type selected");
                     }
@@ -39,17 +39,17 @@ public class CelsToFaren {
 
                 case 2:
                     if (data_type == 1) {
-                        int celcius, fahrenheit;
+                        int celsius, fahrenheit;
                         System.out.println("Please enter Farenheit (int): ");
-                        celcius = scanner.nextInt();
-                        fahrenheit = (9 / 5) * celcius + 32;
-                        System.out.println(celcius + "F = " + fahrenheit + "C");
+                        fahrenheit = scanner.nextInt();
+                        celsius = FarenToCels(fahrenheit);
+                        System.out.println(fahrenheit + "F = " + celsius + "C");
                     } else if (data_type == 2) {
-                        double celcius, fahrenheit;
-                        System.out.println("Please enter Celcius (double): ");
-                        celcius = scanner.nextDouble();
-                        fahrenheit = (9.0 / 5.0) * celcius + 32;
-                        System.out.println(celcius + "C = " + fahrenheit + "F");
+                        double celsius, fahrenheit;
+                        System.out.println("Please enter celsius (double): ");
+                        fahrenheit = scanner.nextDouble();
+                        celsius = FarenToCels(fahrenheit);
+                        System.out.println(fahrenheit + "C = " + celsius + "F");
                     } else {
                         System.out.println("Error, invalid data type selected");
                     }
